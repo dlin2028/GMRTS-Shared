@@ -55,6 +55,11 @@ namespace GMRTSClasses
             }
         }
 
+        public void KillConnection()
+        {
+            connection.Stop();
+        }
+
         public event Action OnHeartbeat;
         public event Action<Unit, ChangingData<Vector2>> OnPositionUpdate;
         public event Action<Unit, ChangingData<float>> OnHealthUpdate;
