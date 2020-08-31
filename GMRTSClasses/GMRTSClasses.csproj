@@ -43,10 +43,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Changing.cs" />
+    <Compile Include="CTSTransferData\AttackAction.cs" />
+    <Compile Include="CTSTransferData\ClientAction.cs" />
+    <Compile Include="CTSTransferData\MoveAction.cs" />
     <Compile Include="IChanger.cs" />
     <Compile Include="Units\Tank.cs" />
     <Compile Include="Units\Unit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="STCTransferData\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
