@@ -5,7 +5,7 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GMRTSClasses
+namespace GMRTSClasses.Units
 {
     public abstract class Unit
     {
@@ -23,6 +23,7 @@ namespace GMRTSClasses
 
         public Changing<float> Health { get; set; }
         public Changing<Vector2> Position { get; set; }
+        public Changing<float> Rotation { get; set; }
 
         public virtual void Update(float elapsedSeconds)
         {
