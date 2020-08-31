@@ -43,9 +43,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Changing.cs" />
+    <Compile Include="CTSTransferData\AssistAction.cs" />
     <Compile Include="CTSTransferData\AttackAction.cs" />
+    <Compile Include="CTSTransferData\BuildFactoryAction.cs" />
     <Compile Include="CTSTransferData\ClientAction.cs" />
     <Compile Include="CTSTransferData\MoveAction.cs" />
+    <Compile Include="CTSTransferData\PatrolAction.cs" />
     <Compile Include="IChanger.cs" />
     <Compile Include="Units\Tank.cs" />
     <Compile Include="Units\Unit.cs" />
