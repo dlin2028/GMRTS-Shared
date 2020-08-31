@@ -50,6 +50,8 @@
     <Compile Include="CTSTransferData\MoveAction.cs" />
     <Compile Include="CTSTransferData\PatrolAction.cs" />
     <Compile Include="IChanger.cs" />
+    <Compile Include="Units\Building.cs" />
+    <Compile Include="Units\Factory.cs" />
     <Compile Include="Units\Tank.cs" />
     <Compile Include="Units\Unit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
