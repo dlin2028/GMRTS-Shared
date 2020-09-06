@@ -1,4 +1,5 @@
-﻿using GMRTSClasses.STCTransferData;
+﻿using GMRTSClasses.CTSTransferData;
+using GMRTSClasses.STCTransferData;
 using GMRTSClasses.Units;
 
 using Microsoft.AspNet.SignalR.Client;
@@ -39,6 +40,31 @@ namespace GMRTSClasses
             hubProxy.On<Guid, ChangingData<float>>("UpdateRotation", RotationUpdate);
             hubProxy.On<Guid>("KillUnit", KillUnit);
             hubProxy.On<UnitSpawnData>("AddUnit", AddUnit);
+        }
+
+        public async Task AssistAction(AssistAction action)
+        {
+            await hubProxy.Invoke("Assist", action);
+        }
+
+        public async Task AttackAction(AttackAction action)
+        {
+            await hubProxy.Invoke("Attack", action);
+        }
+
+        public async Task BuildFactoryAction(BuildFactoryAction action)
+        {
+            await hubProxy.Invoke("BuildFactory", action);
+        }
+
+        public async Task MoveAction(MoveAction action)
+        {
+            await hubProxy.Invoke("Move", action);
+        }
+
+        public async Task PatrolAction(PatrolAction action)
+        {
+            await hubProxy.Invoke("Patrol", action);
         }
 
         public async Task<bool> TryStart()
