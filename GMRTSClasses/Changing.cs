@@ -8,21 +8,27 @@ namespace GMRTSClasses
 {
     public struct Changing<T>
     {
+        public ulong StartTime { get; set; }
+
         public IChanger<T> Changer { get; }
 
+        public T Start { get; set; }
         public T Value { get; set; }
         public T Change { get; set; }
 
-        public Changing(T value, T change, IChanger<T> changer)
+        public Changing(T start, T change, IChanger<T> changer, ulong startMillis)
         {
-            Value = value;
+            Start = start;
+            Value = start;
             Change = change;
             Changer = changer;
+            StartTime = startMillis;
         }
 
-        public void Update(float elapsedSeconds)
+        public void Update(ulong currentMillis)
         {
-            Value = Changer.Add(Value, Changer.Scale(elapsedSeconds, Change));
+            Value = Changer.Add(Start, Changer.Scale((currentMillis - StartTime) / 1000f, Change));
+            //Value = Changer.Add(Value, Changer.Scale(elapsedSeconds, Change));
         }
     }
 }
