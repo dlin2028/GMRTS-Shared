@@ -37,6 +37,8 @@ namespace GMRTSClasses
             hubProxy.On<Guid, ChangingData<Vector2>>("UpdatePosition", PosUpdate);
             hubProxy.On<Guid, ChangingData<float>>("UpdateHealth", HealthUpdate);
             hubProxy.On<Guid, ChangingData<float>>("UpdateRotation", RotationUpdate);
+            hubProxy.On<Guid>("KillUnit", KillUnit);
+            hubProxy.On<UnitSpawnData>("AddUnit", AddUnit);
         }
 
         public async Task<bool> TryStart()
@@ -64,6 +66,8 @@ namespace GMRTSClasses
         public event Action<Unit, ChangingData<Vector2>> OnPositionUpdate;
         public event Action<Unit, ChangingData<float>> OnHealthUpdate;
         public event Action<Unit, ChangingData<float>> OnRotationUpdate;
+        public event Action<Unit> TriggerUnitDeath;
+        public event Action<UnitSpawnData> SpawnUnit;
 
         private async void Beat()
         {
@@ -90,6 +94,17 @@ namespace GMRTSClasses
             Unit unit = getUnit(id);
             unit.Rotation = new Changing<float>(newRotation.Value, newRotation.Delta, unit.Rotation.Changer, newRotation.StartTime);
             OnRotationUpdate?.Invoke(unit, newRotation);
+        }
+
+        private void KillUnit(Guid id)
+        {
+            Unit unit = getUnit(id);
+            TriggerUnitDeath?.Invoke(unit);
+        }
+
+        private void AddUnit(UnitSpawnData spawnInfo)
+        {
+            SpawnUnit?.Invoke(spawnInfo);
         }
     }
 }
