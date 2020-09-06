@@ -74,21 +74,21 @@ namespace GMRTSClasses
         private void PosUpdate(Guid id, ChangingData<Vector2> newPos)
         {
             Unit unit = getUnit(id);
-            unit.Position = new Changing<Vector2>(newPos.Value, newPos.Delta, unit.Position.Changer);
+            unit.Position = new Changing<Vector2>(newPos.Value, newPos.Delta, unit.Position.Changer, newPos.StartTime);
             OnPositionUpdate?.Invoke(unit, newPos);
         }
 
         private void HealthUpdate(Guid id, ChangingData<float> newHealth)
         {
             Unit unit = getUnit(id);
-            unit.Health = new Changing<float>(newHealth.Value, newHealth.Delta, unit.Health.Changer);
+            unit.Health = new Changing<float>(newHealth.Value, newHealth.Delta, unit.Health.Changer, newHealth.StartTime);
             OnHealthUpdate?.Invoke(unit, newHealth);
         }
 
         private void RotationUpdate(Guid id, ChangingData<float> newRotation)
         {
             Unit unit = getUnit(id);
-            unit.Rotation = new Changing<float>(newRotation.Value, newRotation.Delta, unit.Rotation.Changer);
+            unit.Rotation = new Changing<float>(newRotation.Value, newRotation.Delta, unit.Rotation.Changer, newRotation.StartTime);
             OnRotationUpdate?.Invoke(unit, newRotation);
         }
     }

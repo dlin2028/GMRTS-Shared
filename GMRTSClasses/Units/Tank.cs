@@ -16,9 +16,9 @@ namespace GMRTSClasses.Units
         {
         }
 
-        public override void Update(float elapsedSeconds)
+        public override void Update(ulong currentMilliseconds)
         {
-            base.Update(elapsedSeconds);
+            base.Update(currentMilliseconds);
         }
     }
 }

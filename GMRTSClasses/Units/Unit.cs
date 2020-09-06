@@ -25,10 +25,10 @@ namespace GMRTSClasses.Units
         public Changing<Vector2> Position { get; set; }
         public Changing<float> Rotation { get; set; }
 
-        public virtual void Update(float elapsedSeconds)
+        public virtual void Update(ulong currentMilliseconds)
         {
-            Health.Update(elapsedSeconds);
-            Position.Update(elapsedSeconds);
+            Health.Update(currentMilliseconds);
+            Position.Update(currentMilliseconds);
         }
     }
 }
