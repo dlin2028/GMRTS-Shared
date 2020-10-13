@@ -29,6 +29,7 @@ namespace GMRTSClasses.Units
         {
             Health.Update(currentMilliseconds);
             Position.Update(currentMilliseconds);
+            Rotation.Update(currentMilliseconds);
         }
     }
 }
