@@ -1,0 +1,6 @@
+[submodule "GMRTS-Server"]
+	path = GMRTS-Server
+	url = https://github.com/dlin2028/GMRTS-Server.git
+[submodule "GMRTS-Client"]
+	path = GMRTS-Client
+	url = https://github.com/dlin2028/GMRTS-Client.git
