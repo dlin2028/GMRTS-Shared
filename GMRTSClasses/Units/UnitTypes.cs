@@ -14,13 +14,13 @@ namespace GMRTSClasses.Units
     }
     public enum MobileUnitType
     {
-        Tank,
+        Tank = 0,
         Builder
     }
-    public enum BuildingUnitType
+    public enum BuildingType
     {
         Factory = 2,
-        Market,
+        Supermarket,
         Mine
     }
 }
