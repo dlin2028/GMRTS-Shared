@@ -1,9 +1,0 @@
-C:\Users\David\Documents\GitHub\GMRTS-Shared\GMRTSClasses\bin\Debug\netstandard2.1\GMRTSClasses.deps.json
-C:\Users\David\Documents\GitHub\GMRTS-Shared\GMRTSClasses\bin\Debug\netstandard2.1\GMRTSClasses.dll
-C:\Users\David\Documents\GitHub\GMRTS-Shared\GMRTSClasses\bin\Debug\netstandard2.1\GMRTSClasses.pdb
-C:\Users\David\Documents\GitHub\GMRTS-Shared\GMRTSClasses\obj\Debug\netstandard2.1\GMRTSClasses.csprojAssemblyReference.cache
-C:\Users\David\Documents\GitHub\GMRTS-Shared\GMRTSClasses\obj\Debug\netstandard2.1\GMRTSClasses.AssemblyInfoInputs.cache
-C:\Users\David\Documents\GitHub\GMRTS-Shared\GMRTSClasses\obj\Debug\netstandard2.1\GMRTSClasses.AssemblyInfo.cs
-C:\Users\David\Documents\GitHub\GMRTS-Shared\GMRTSClasses\obj\Debug\netstandard2.1\GMRTSClasses.csproj.CoreCompileInputs.cache
-C:\Users\David\Documents\GitHub\GMRTS-Shared\GMRTSClasses\obj\Debug\netstandard2.1\GMRTSClasses.dll
-C:\Users\David\Documents\GitHub\GMRTS-Shared\GMRTSClasses\obj\Debug\netstandard2.1\GMRTSClasses.pdb
