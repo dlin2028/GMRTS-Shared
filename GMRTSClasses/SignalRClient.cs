@@ -50,7 +50,7 @@ namespace GMRTSClasses
             disposables.Add(connection.On<ActionOver>("ActionOver", ActionDone));
             disposables.Add(connection.On<OrderCompleted>("OrderFinished", OrderFinished));
             disposables.Add(connection.On<ResourceUpdate>("ResourceUpdated", ResourceUpdated));
-            disposables.Add(connection.On<ShotFiredData>("ShotFired", ShotFired);
+            disposables.Add(connection.On<ShotFiredData>("ShotFired", ShotFired));
         }
 
         public async ValueTask DisposeAsync()
