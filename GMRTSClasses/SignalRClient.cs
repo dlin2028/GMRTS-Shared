@@ -50,6 +50,7 @@ namespace GMRTSClasses
             disposables.Add(connection.On<ActionOver>("ActionOver", ActionDone));
             disposables.Add(connection.On<OrderCompleted>("OrderFinished", OrderFinished));
             disposables.Add(connection.On<ResourceUpdate>("ResourceUpdated", ResourceUpdated));
+            disposables.Add(connection.On<ShotFiredData>("ShotFired", ShotFired);
         }
 
         public async ValueTask DisposeAsync()
@@ -216,6 +217,7 @@ namespace GMRTSClasses
         public event Action<ActionOver> OnActionFinish;
         public event Action<ResourceUpdate> OnResourceUpdated;
         public event Action<OrderCompleted> OnOrderCompleted;
+        public event Action<ShotFiredData> OnShotFired;
 
         private async void Beat()
         {
@@ -273,6 +275,11 @@ namespace GMRTSClasses
         private void ResourceUpdated(ResourceUpdate update)
         {
             OnResourceUpdated?.Invoke(update);
+        }
+        
+        private void ShotFired(ShotFiredData data)
+        {
+            OnShotFired?.Invoke(data);
         }
     }
 }
